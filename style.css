@@ -38,7 +38,9 @@ nav{
 
 .contenedorPortada{
     width: 100%;
-    position: absolute;
+    height: 100vh;
+    position: relative;
+    background-image: url(imagenes/portada1.jpg);
     
 }
 
@@ -59,7 +61,7 @@ nav{
     justify-content: center;
     align-items: center;
     z-index: 0;
-    position: relative;
+    position: absolute;
     transform: translateY(280px);
 }
 
@@ -83,8 +85,34 @@ width: 80%;
 margin: 5px;
 }
 
+/*seccion*/
 
 
+.columnaColeccion{
+    background-color: black;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.columnaColeccion:hover{
+    color: black;
+    background-color: white;
+}
+
+.seccionIndex{
+    background-color: black;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
 
 
 
@@ -96,7 +124,8 @@ footer {
     width: 100%;
     height: 30vh;
     background-color: black;
-    margin-top: 600px;
+   
+  
     
     
   }
