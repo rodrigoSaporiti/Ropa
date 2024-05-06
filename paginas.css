@@ -1,0 +1,68 @@
+.mainPaginas{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  height: 100vh;
+  margin-top: 180px;
+  
+ 
+   
+}
+
+.contenedorMain{
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+   height: 90%;
+   
+}
+
+.textura2{
+    background-color: #000000;
+background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.asideRemeras{
+    width: 20%;
+    background-color: white;
+   
+}
+
+.menuVestimenta{
+   border: 2px solid white;
+    width: 100%;
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.contenedorProductoPaginas{
+    width: 200px;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   margin: 10px;
+}
+
+.contenedorImagenPaginas{
+    height: 80%;
+    overflow: hidden;
+   
+}
+
+.imagenPaginas{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
