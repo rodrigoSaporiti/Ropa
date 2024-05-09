@@ -4,6 +4,13 @@ background-image: url("https://www.transparenttextures.com/patterns/checkered-li
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
+.textura2{
+    background-color: #000000;
+background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+
 .cursor-pointer{
     cursor: pointer;
 }

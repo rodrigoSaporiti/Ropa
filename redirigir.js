@@ -27,3 +27,16 @@ function inicio (){
     window.location.href="index.html"
 
 }
+
+function product(){
+
+    window.location.href="product.html"
+
+}
+
+
+function carrito(){
+
+    window.location.href="carrito.html"
+
+}

@@ -1,0 +1,48 @@
+.mainProduct{
+    min-height: 100vh;
+    margin-top: 150px;
+}
+
+
+.colImagen{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: end;
+    margin: 20px;
+}
+
+.imagenProduct{
+    width: 400px;
+    height: 500px;
+    
+}
+
+.imgMiniatura{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 5px;
+    border: solid 1px white;
+    
+}
+
+
+.colInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 20px;
+   
+}
+
+
+.contenedorInfo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

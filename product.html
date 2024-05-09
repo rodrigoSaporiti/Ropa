@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorem</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="paginas.css">
+    <link rel="stylesheet" href="product.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,227 +137,78 @@
 
    </header>
 
+<main class="mainProduct">
 
+<div class="row d-flex justify-content-center align-items-center">
 
-   <main class="mainPaginas  ">
+    <div class="col-5 colImagen">
 
-<div class="contenedorMain">
+    <img id="img" class="imagenProduct" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
 
-   <aside class="asideRemeras">
+    <div class="d-flex justify-content-center mt-4">
 
-   <div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Talle
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
+      <img class="imgMiniatura" src="https://acdn.mitiendanube.com/stores/002/815/592/products/image00003_f9400ab1-344a-4f55-8da0-33164b8801e8-photoroom1-98697cf0dbc998f4d616776771355474-1024-1024.png" alt="">
 
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                <label class="btn btn-outline-dark" for="btncheck1">XS</label>
-              
-                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                <label class="btn btn-outline-dark" for="btncheck2">S</label>
-              
-                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                <label class="btn btn-outline-dark" for="btncheck3">M</label>
-            
-                <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-                <label class="btn btn-outline-dark" for="btncheck4">L</label>
-            
-                
-                <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
-                <label class="btn btn-outline-dark" for="btncheck5">XL</label>
-            
-              </div>
-        
-        
-        </div>
-      </div>
+      <img class="imgMiniatura" src="https://redndog.com/assets/cache/images/38bae1a56943c10835673040022058ad.jpg" alt="">
+
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Precio
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body d-flex flex-column">
 
-      <input type="number" id="minPrecio" placeholder="Min">
-      <input type="number" id="maxPrecio" placeholder="Max">
-      <button class="btn btn-dark m-2 ">Ok</button>
+    </div> <!-- cierre primer col  -->
+    
+
+    <div class="col-5 colInfo">
+
+    
+
+      <div class="contenedorInfo">
+
+        <h2 id="descripcion" class="text-center text-white">Remera Oversize Negra</h2>
         
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Orden
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
+        <h1 class="text-center text-white" >$<span id="precio">990</span></h1>
 
-            <select class="form-select" aria-label="Default select example">
-                <option value="" disabled selected hidden>Orden</option>
-                <option value="1">Destacados</option>
-                <option value="2">Menor Precio</option>
-                <option value="3">Mayor Precio</option>
-              </select>
-        </div>
-      </div>
-    </div>
-  </div>
+      <select id="talle" class="form-select m-3" aria-label="Default select example">
+        <option value="" disabled selected hidden>Talle</option>
+        <option value="xs">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
 
+
+      
+      <select id="color" class="form-select m-3" aria-label="Default select example">
+        <option value="" disabled selected hidden>Color</option>
+        <option value="negro">Negro</option>
+        <option value="blanco">Blanco</option>
+      </select>
   
-   
-</aside>
+
+      <select id="cantidad" class="form-select m-3" aria-label="Default select example">
+        <option value="" disabled selected hidden>Cantidad</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
 
 
 
-  <section class="menuVestimenta">
-
-    <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
-
-    
+      <button id="comprar" class="btn btn-dark m-3">Añadir al Carrito</button>
 
 
-   <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
+    </div>
+  
+      </div> <!-- cierre segundo col  -->
 
-   <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
-      <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
-      <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
-      <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
-      <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
-      <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
 
-          <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
-   
-         <!-- inicio card producto -->
-    <div onclick="product()" class="contenedorProductoPaginas">
-     <div class="contenedorImagenPaginas" >
-        <img class="imagenPaginas" src="https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg" alt="">
-         </div><!-- cierre contenedorImagenPaginas -->
-        <div class="infoProducto">
-        <p class="m-0 ">Buzo Oversize</p>
-        <p class="m-0 ">$990</p>
-      </div>
-    </div> 
-    <!-- cierre producto -->
-  </section>
+
+
+</div><!-- cierre row -->
 
 
 
 
 
-</div><!-- cierre contenedor dentro de main -->
-
-   
-
-    
-
- 
-
-
-
-   </main>
-
-
+</main>
 
 
 
@@ -473,6 +324,7 @@
 
 </footer>
 
+<script src="product.js"></script>
 <script src="redirigir.js"></script>
 <script src="index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
