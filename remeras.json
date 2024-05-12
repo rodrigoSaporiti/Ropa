@@ -1,0 +1,25 @@
+[
+    {
+        "talle": ["xs", "s", "m", "l", "xl"],
+        "color": ["negro"],
+        "stock": "11",
+        "descripcion": "Remera Basica Oversize Negra",
+        "precio": "990",
+        "imagen": "https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg",
+        "imagenMiniatura": "https://acdn.mitiendanube.com/stores/002/815/592/products/image00003_f9400ab1-344a-4f55-8da0-33164b8801e8-photoroom1-98697cf0dbc998f4d616776771355474-1024-1024.png",
+        "imagenMiniatura2": "https://redndog.com/assets/cache/images/38bae1a56943c10835673040022058ad.jpg",
+        "id" : 1    
+    },
+
+    {
+        "talle": ["xs", "s", "m", "l", "xl"],
+        "color": ["blanco", "negro"],
+        "stock": "11",
+        "descripcion": "Remera Basica Oversize",
+        "precio": "990",
+        "imagen": "https://acdn.mitiendanube.com/stores/568/679/products/frente-liso1-17dde8937eb4f7568316846787240204-1024-1024.png",
+        "imagenMiniatura": "https://d22fxaf9t8d39k.cloudfront.net/f0867cb47d70e473e8f8dd2f858d7565e514cfd63075968d7da5e3e972c0ef6435305.jpg",
+        "imagenMiniatura2": "https://acdn.mitiendanube.com/stores/002/815/592/products/whatsapp-image-2023-01-05-at-14-32-391-11b35ebe22cb9aa50016816096944126-1024-1024.jpeg",
+        "id" : 1    
+    }
+]
