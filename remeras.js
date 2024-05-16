@@ -54,3 +54,25 @@ async function traerRemeras(){
 
 
 mostrarRemeras()
+
+
+
+
+
+let xl = document.getElementById("xl");
+let l = document.getElementById("l");
+let m = document.getElementById("m");
+let s = document.getElementById("s");
+let xs = document.getElementById("xs");
+
+
+
+
+async function check(checkbox, talle){
+
+  let remeras = await traerRemeras();
+
+  if(checkbox.checked && checkbox.value === (remeras.l)
+
+
+}

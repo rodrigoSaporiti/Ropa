@@ -1,8 +1,11 @@
 [
     {
-        "talle": ["xs", "s", "m", "l", "xl"],
-        "color": ["negro"],
-        "stock": "11",
+         "color": "negro",
+         "xl" : 3,
+         "l": 1,
+         "m": 0,
+         "s": 2,
+         "xs": 0,
         "descripcion": "Remera Basica Oversize Negra",
         "precio": "990",
         "imagen": "https://acdn.mitiendanube.com/stores/001/350/251/products/costuras-back-negro-04837239a467056aac17019046140640-1024-1024.jpg",
@@ -12,9 +15,12 @@
     },
 
     {
-        "talle": ["xs", "s", "m", "l", "xl"],
-        "color": ["blanco", "negro"],
-        "stock": "11",
+        "color": "blanco",
+        "xl" : 0,
+         "l": 1,
+         "m": 5,
+         "s": 0,
+         "xs": 0,
         "descripcion": "Remera Basica Oversize",
         "precio": "990",
         "imagen": "https://static.lefties.com/9/photos2/2023/V/0/2/p/1011/539/250/1011539250_2_6_1.jpg?t=1678953486925",
