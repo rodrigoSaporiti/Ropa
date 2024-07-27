@@ -28,11 +28,6 @@ function inicio (){
 
 }
 
-function product(){
-
-    window.location.href="product.html"
-
-}
 
 
 function carrito(){
@@ -40,3 +35,6 @@ function carrito(){
     window.location.href="carrito.html"
 
 }
+
+
+
