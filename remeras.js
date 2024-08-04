@@ -87,14 +87,22 @@ let xs = document.getElementById("xs");
 
 // Creo una funcion, donde voy a utilizar más adelante para todos los talles
 
+
+let arrayConTodosLosTalles = [];
+
+
+
 async function filtroTalle(e){
 
   let remeras = await traerRemeras();
 
   let talleRopa = e.value;
+ 
+ 
 
+  let remerasFiltradasPorTalle = remeras.filter(talle => talle[talleRopa] > 0 )
 
-  let remerasFiltradasPorTalle = remeras.filter(talle => talle[talleRopa] > 0)
+  
 
   let remeras0 = remerasFiltradasPorTalle.length
 
@@ -107,7 +115,7 @@ e.addEventListener("click", async()=>{
 
     console.log("ok")
 
-    console.log(remerasFiltradasPorTalle)
+  
 
 
     if(remeras0 ==0){
@@ -118,16 +126,59 @@ e.addEventListener("click", async()=>{
 
     }else{
 
+      remerasFiltradasPorTalle.forEach(element => {
 
 
+        let objetoTalle = {
+          id : element.id,
+         color: element.color,
+         xl : element.xl,
+         l: element.l,
+         m: element.m,
+         s: element.s,
+         xs: element.xs,
+         descripcion: element.descripcion,
+         precio: element.precio,
+         imagen: element.imagen,
+         imagenMiniatura: element.imagenMiniatura,
+         imagenMiniatura2: element.imagenMiniatura2,
+         destacado:  element.destacado
 
+        }
+       
+        
+       
+        let iD = element.id
+        let existeRemera = arrayConTodosLosTalles.some(e=> e.id == iD)
+
+        console.log(existeRemera)
+
+          if(!existeRemera){
+
+            arrayConTodosLosTalles.push(objetoTalle)
+
+  
+            }
+
+      
+        
+       
+ 
+    
+        });
+  
       
 
       ingresarCards.innerHTML= "";
 
-remerasFiltradasPorTalle.forEach(element => {
 
- 
+
+
+
+
+
+arrayConTodosLosTalles.forEach(element => {
+
 
   ingresarCards.innerHTML += `
   
@@ -149,6 +200,10 @@ remerasFiltradasPorTalle.forEach(element => {
   `
   
 });
+
+  
+  
+
 
 let remerasJson = JSON.stringify(remerasFiltradasPorTalle);
 localStorage.setItem("remerasOrdenar", remerasJson);
@@ -411,3 +466,6 @@ function product(e){
    
 
 }
+
+
+
