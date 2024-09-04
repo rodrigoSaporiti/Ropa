@@ -15,6 +15,7 @@
 <body class="textura2">
 
 
+
     
    <nav class="fixed-top">
 
@@ -141,9 +142,86 @@
 
 
 
-<main class="mainCarrito">
+<main class="mainCarrito mb-5">
 
-<div class="tablaCarrito">
+  <div class="row w-100">
+
+<div class="col-6 d-flex flex-column align-items-center">
+
+  <div class="btn-group d-flex justify-content-center  w-50" role="group" aria-label="Basic radio toggle button group">
+
+    <input type="radio" class="btn-check" name="btnradio" id="entregaDac" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="entregaDac">Entrega DAC</label>
+  
+    <input type="radio" class="btn-check" name="btnradio" id="entregaTienda" autocomplete="off">
+    <label class="btn btn-outline-primary" for="entregaTienda">Retirar en Tienda</label>
+
+   
+  </div>
+  
+
+  <div id="contenidoDac" class="mt-5">
+
+      
+    <div  id="contenidoAgencia" class="mb-5">
+
+      <div class="form-check">
+      <label class="text-white form-check-label" for="">Retiro en Agencia</label>
+      <input class="form-check-input" name="tipoRetiro" type="radio" id="retiroEnAgencia">
+    </div>
+
+      <select class="form-select" aria-label="Default select example" id="sucursales">
+        <option selected disabled>Seleccione Sucursal</option>
+        <option value="1">Tres Cruces</option>
+        <option value="2">Salto</option>
+        <option value="3">Canelones</option>
+      </select>
+
+    </div>
+    <!-- finaliza contenidoAgencia -->
+
+
+
+    <div id="contenidoDomicilio" class="mt-5">
+
+
+      <div class="form-check">
+        <label class="text-white form-check-label" for="">Envio a Domicilio</label>
+        <input class="form-check-input" name="tipoRetiro" type="radio" id="envioDomicilio">
+      </div>
+
+
+<input type="text" placeholder="Nombre" id="Cliente_Destinatario">
+        
+      <input type="text" placeholder="Direccion" id="Direccion_Destinatario">
+      <input type="text" placeholder="Telefono" id="Telefono">
+
+
+
+
+
+
+    </div>
+    <!-- finaliza contenidoDomicilio  -->
+    
+
+
+  </div>
+  <!-- finaliza contenidoDac -->
+
+
+
+  
+</div>
+<!-- finaliza primer col -->
+
+
+
+<div class="col-6">
+
+
+
+  <div class="tablaCarrito">
 
     <table class="table">
         <thead>
@@ -169,6 +247,18 @@
       <button id="finalizarCompra" class="btn btn-dark w-100 botonComprar">Finalizar Compra</button>
 
     </div>
+
+
+
+</div>
+<!-- finaliza segundo col -->
+
+
+
+
+
+</div> <!-- Finaliza row --> 
+  
 
 
 </main>
@@ -300,6 +390,7 @@
 </footer>
 
 <script src="carrito.js"></script>
+<script src="wsInGuia_Levante.js"></script>
 <script src="redirigir.js"></script>
 <script src="index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

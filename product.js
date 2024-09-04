@@ -336,8 +336,10 @@ function clickFueraDeImagen(){
   
   const imgContenedor = document.getElementById("clickEnImagen");
 
+
   imgContenedor.addEventListener("click", e =>{
 
+    console.log(e);
     if(e.target.id == "imgClick"){
 
     }else{

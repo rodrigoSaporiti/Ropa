@@ -14,8 +14,8 @@ carritoParse.forEach(function(element, indice){
     <tr>
     <th scope="row">${indice+1}</th>
      <td class="d-flex  align-items-center m-0"> <img class="imgTabla m-0" src="${element.imagen}"> <p class="ms-5">${element.descripcion}</p></td>
-    <td>${element.cantidad}</td>
-    <td>$ <span>${subtotal}</span></td>
+    <td id="cantidadRemera">${element.cantidad}</td>
+    <td>$ <span id="precio" value="${subtotal}">${subtotal}</span></td>
   </tr>
 
     `
@@ -43,10 +43,71 @@ let total = document.getElementById("total");
 
  let finalizarCompra = document.getElementById("finalizarCompra");
 
- finalizarCompra.addEventListener("click", ()=>{
+ 
 
-    alert("Compra Finalizada con Exito")
 
-    localStorage.removeItem("carrito")
-    location.reload()
- })
+
+
+ // modal tipo de entrega parte1: boton siguiente
+
+
+
+
+
+const retiroEnAgencia = document.getElementById("retiroEnAgencia");
+
+const sucursales = document.getElementById("sucursales")
+
+const envioDomicilio = document.getElementById("envioDomicilio")
+
+const nombre = document.getElementById("Cliente_Destinatario");
+
+const direccion = document.getElementById("Direccion_Destinatario");
+
+const telefono = document.getElementById("Telefono")
+
+
+
+retiroEnAgencia.addEventListener("change",(e)=>{
+
+if(e.target.checked)
+
+    sucursales.classList.remove("bg-dark")
+
+    nombre.disabled= true
+    direccion.disabled= true
+    telefono.disabled= true
+
+    sucursales.disabled = false
+
+    envioDomicilio.checked = false
+    
+})
+
+
+
+envioDomicilio.addEventListener("change",(e)=>{
+
+    e.preventDefault()
+
+    if(e.target.checked)
+        
+       
+
+        sucursales.classList.add("bg-dark")
+
+        
+        nombre.disabled= false
+       direccion.disabled= false
+       telefono.disabled= false
+    
+        sucursales.disabled = true;
+        retiroEnAgencia.checked = false
+        
+    })
+    
+
+
+
+
+
