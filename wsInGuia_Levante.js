@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Telefono"
       ).value;
       const RUT = ""
-      const K_Oficina_Destino = "661"
+      const K_Oficina_Destino = localStorage.getItem('K_Oficina_Destino');
       const Entrega = "1"
       const Paquetes_Ampara = 1
     
