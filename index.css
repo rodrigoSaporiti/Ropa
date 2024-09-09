@@ -1,5 +1,6 @@
 
 
+
 /*Parte superior*/
 nav{
   width: 100%;
@@ -123,12 +124,12 @@ height: 100%;
 .barraHorizontal{
 
   width: 100%;
-  height: 150px;
+  height: 60px;
   background-color :#140d1a ;
 }
 
 .camion{
-  width: 80px;
+  width: 40px;
   margin: 10px;
   animation: mover-izquierda-derecha 2s linear infinite;
 }
@@ -300,6 +301,7 @@ margin-bottom: 20px;
     transform: translateX(20px);
    }
 
+
    
    .bloque1{
     width: 100%;
@@ -323,6 +325,10 @@ margin-bottom: 20px;
 
   .menuMujer{
     margin-top: 40px;
+  }
+
+  .cardMenu p{
+    font-size: 15px;
   }
 
 
@@ -373,4 +379,22 @@ margin-bottom: 20px;
 }
   
 
+}
+
+
+
+@media (max-width: 375px) {
+ 
+  .cardMenu{
+    width: 80px;
+    height: 80px;
+    
+  }
+
+  .cardMenu p{
+    font-size: 12px;
+  }
+
+
+ 
 }
