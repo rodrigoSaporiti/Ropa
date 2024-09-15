@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   </head>
+
 <body id="body" class="bg-light ">
 
   <div class="barraSuperior">
@@ -26,7 +27,7 @@
     </div>
 
    <div class="w-100">
-    <h1 class="text-center me-5">LOOKBETA</h1>
+    <h1 onclick="inicio()" class="text-center me-5">LOOKBETA</h1>
   </div>
     
   </nav>
@@ -45,26 +46,28 @@
 
       <div class="d-flex flex-wrap container justify-content-center">
 
-       
-      <div class="cardMenu">
-        <img class="imgCardMenu" src="imagenes/remera-de-modal-unisex.jpg" alt="">
+       <a href="tienda.html" class="text-decoration-none text-black">
+      <div class="cardMenu" id="remerasMujer" data-titulo="remerasMujer">
+        <img class="imgCardMenu" src="imagenes/remera-de-modal-unisex.jpg" alt="" >
 
-        <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+        <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25"  >
         <p class="text-center fw-bold mb-0">REMERAS</p>
         </div>
       </div>
-          
+    </a>
       
-        <div class="cardMenu">
-          <img class="imgCardMenu" src="imagenes/canguroMUJER.jpg" alt="">
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="cangurosMujer" data-titulo="cangurosMujer">
+          <img class="imgCardMenu" src="imagenes/canguroMUJER.jpg" alt="" >
   
           <div class=" w-100 d-flex justify-content-center align-items-center h-25">
           <p class="text-center text-white fw-bold mb-0">CANGUROS</p>
           </div>
         </div>
-
+      </a>
   
-        <div class="cardMenu">
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="camperasMujer" data-titulo="camperasMujer">
           <img class="imgCardMenu" src="https://w0.peakpx.com/wallpaper/35/527/HD-wallpaper-women-model-pink-jacket-brown-eyes-smiling-standing-brunette-looking-at-viewer-white-background-black-pants-thumbnail.jpg" alt="">
   
           <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
@@ -72,7 +75,10 @@
           </div>
         </div>
 
-        <div class="cardMenu">
+      </a>
+
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="shortMujer" data-titulo="shortMujer">
           <img class="imgCardMenu" src="https://i.pinimg.com/236x/df/23/47/df23470f0cb23e006be3d20c7e69285c.jpg" alt="">
   
           <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
@@ -80,23 +86,28 @@
           </div>
         </div>
 
-        <div class="cardMenu">
+      </a>
+
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="pantalonesMujer" data-titulo="pantalonesMujer">
           <img class="imgCardMenu" src="https://marieclaire.ng/wp-content/uploads/2023/11/Mum-660x1024.jpg" alt="">
   
           <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
           <p class="text-center fw-bold mb-0">PANTALONES</p>
           </div>
         </div>
+      </a>
 
 
-        <div class="cardMenu">
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="accesoriosMujer" data-titulo="accesoriosMujer">
           <img class="imgCardMenu" src="https://bucket.somosohlala.com.ar/s3fs-public/styles/internal_990/public/2024-01/2_14.jpg.webp?itok=HYgCLZ1P" alt="">
   
           <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
           <p class="text-center fw-bold mb-0">ACCESORIOS</p>
           </div>
         </div>
-          
+      </a>
 
 
 
@@ -119,6 +130,7 @@
 
 
 
+<!-- menu hombre (pero mantiene la class menuMujer) -->
 
 
     <div class="menuMujer mt-4">
@@ -128,58 +140,70 @@
 
       <div class="d-flex flex-wrap container justify-content-center">
 
-       
-      <div class="cardMenu">
+        <a href="tienda.html" class="text-decoration-none text-black">
+      <div class="cardMenu" id="remerasHombre" data-titulo="remerasHombre">
         <img class="imgCardMenu" src="https://m.media-amazon.com/images/I/616ZfqXB+nL._AC_UY580_.jpg" alt="">
 
         <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
         <p class="text-center fw-bold mb-0">REMERAS</p>
         </div>
       </div>
+    </a>
           
-      
-        <div class="cardMenu">
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="cangurosHombre" data-titulo="cangurosHombre">
           <img class="imgCardMenu" src="https://f.fcdn.app/imgs/f87318/gap.com.uy/gapuy/b239/original/catalogo/000737296_G1O0_1/2000-2000/canguro-con-felpa-hombre-light-heather-grey-b08.jpg" alt="">
   
           <div class=" w-100 d-flex justify-content-center align-items-center h-25">
           <p class="text-center text-white fw-bold mb-0">CANGUROS</p>
           </div>
         </div>
+      </a>
 
-  
-        <div class="cardMenu">
+
+        <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="camperasHombre" data-titulo="camperasHombre">
           <img class="imgCardMenu" src="https://www.bostonwear.com/666421-home_default/cazadora-bomber.jpg" alt="">
   
           <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
           <p class="text-center fw-bold mb-0">CAMPERAS</p>
           </div>
         </div>
+      </a>
 
-        <div class="cardMenu">
+        <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="shortHombre" data-titulo="shortHombre">
           <img class="imgCardMenu" src="https://burtoncl.vtexassets.com/arquivos/ids/204703-800-auto?v=638367717786500000&width=800&height=auto&aspect=true" alt="">
   
           <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
           <p class="text-center fw-bold mb-0">SHORT</p>
           </div>
         </div>
+         </a>
 
-        <div class="cardMenu">
+
+
+        <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="pantalonesHombre" data-titulo="pantalonesHombre">
           <img class="imgCardMenu" src="https://pantalonesdemezclilla.mx/cdn/shop/files/Hombre-azul-baggy-jeans-regulars_6.jpg?v=1706865218&width=1445" alt="">
   
           <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
           <p class="text-center fw-bold mb-0">PANTALONES</p>
           </div>
         </div>
+      </a>
 
 
-        <div class="cardMenu">
+
+        <a href="tienda.html" class="text-decoration-none text-black"> 
+        <div class="cardMenu" id="accesoriosHombre" data-titulo="accesoriosHombre">
           <img class="imgCardMenu" src="https://i5.walmartimages.com/asr/4592f63e-6dae-4b16-b2dd-3418a3bf9245.baf9a7845b400c7388b41b42f7c6a67a.jpeg" alt="">
   
           <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
           <p class="text-center fw-bold mb-0">ACCESORIOS</p>
           </div>
         </div>
-          
+          </a>
 
 
 

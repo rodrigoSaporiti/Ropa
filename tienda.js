@@ -1,14 +1,43 @@
+//bajo categoria que elige el cliente
+
+const localCategoria = localStorage.getItem("pagina");
 
 // Variable donde voy a mostrar las cards
 let ingresarCards = document.getElementById("ingresarCards");
 
 
+
+
+
+function card(element){
+  ingresarCards.innerHTML += `
+  <!-- inicio card producto -->
+  <div onclick="product(${element.id})" class="contenedorProductoPaginas">
+   <div class="contenedorImagenPaginas" >
+      <img class="imagenPaginas" src="${element.imagen}" alt="">
+       </div><!-- cierre contenedorImagenPaginas -->
+      <div class="infoProducto">
+      <p class="m-0 ">${element.descripcion}</p>
+      <p class="m-0 ">$ ${element.precio}</p>
+    </div>
+  </div> 
+  <!-- cierre producto -->
+       `
+}
+
+
+
 // fetch donde traigo las remeras del json
+
+
+
+
+
 
 async function traerRemeras(){
 
     try {
-        const response = await fetch(`remeras.json`);
+        const response = await fetch(`${localCategoria}.json`);
         // const response = await fetch(`https://rodrigosaporiti.github.io/Ropa/remeras.json`);
         if (!response.ok) {
           throw new Error('Hubo un problema al obtener los datos');
@@ -34,41 +63,11 @@ async function traerRemeras(){
     let remeras = await traerRemeras();
 
     remeras.forEach(element => {
-
-        ingresarCards.innerHTML += `
-        
-        
-        
-   <!-- inicio card producto -->
-   <div onclick="product(${element.id})" class="contenedorProductoPaginas">
-    <div class="contenedorImagenPaginas" >
-       <img class="imagenPaginas" src="${element.imagen}" alt="">
-        </div><!-- cierre contenedorImagenPaginas -->
-       <div class="infoProducto">
-       <p class="m-0 ">${element.descripcion}</p>
-       <p class="m-0 ">$ ${element.precio}</p>
-     </div>
-   </div> 
-   <!-- cierre producto -->
-        
-        
-        `
-        
-
-        
-        
-
+      card(element);
 
     });
 
-
   }
-
-
-
-mostrarRemeras()
-
-
 
 
 
@@ -95,11 +94,7 @@ let arrayConTodosLosTalles = [];
 async function filtroTalle(e){
 
   let remeras = await traerRemeras();
-
   let talleRopa = e.value;
- 
- 
-
   let remerasFiltradasPorTalle = remeras.filter(talle => talle[talleRopa] > 0 )
 
   
@@ -112,11 +107,6 @@ e.addEventListener("click", async()=>{
 
 
   if(e.checked){
-
-    console.log("ok")
-
-  
-
 
     if(remeras0 ==0){
       ingresarCards.innerHTML= `
@@ -180,24 +170,7 @@ e.addEventListener("click", async()=>{
 arrayConTodosLosTalles.forEach(element => {
 
 
-  ingresarCards.innerHTML += `
-  
-  
-  
-<!-- inicio card producto -->
-<div onclick="product()" class="contenedorProductoPaginas">
-<div class="contenedorImagenPaginas" >
- <img class="imagenPaginas" src="${element.imagen}" alt="">
-  </div><!-- cierre contenedorImagenPaginas -->
- <div class="infoProducto">
- <p class="m-0 ">${element.descripcion}</p>
- <p class="m-0 ">$ ${element.precio}</p>
-</div>
-</div> 
-<!-- cierre producto -->
-  
-  
-  `
+  card(element)
   
 });
 
@@ -278,24 +251,7 @@ ingresarCards.innerHTML = "";
 remerasFiltradas.forEach(element => {
 
   
-
-  ingresarCards.innerHTML += `
-  
-  
-  
-<!-- inicio card producto -->
-<div onclick="product()" class="contenedorProductoPaginas">
-<div class="contenedorImagenPaginas" >
- <img class="imagenPaginas" src="${element.imagen}" alt="">
-  </div><!-- cierre contenedorImagenPaginas -->
- <div class="infoProducto">
- <p class="m-0 ">${element.descripcion}</p>
- <p class="m-0 ">$ ${element.precio}</p>
-</div>
-</div> 
-<!-- cierre producto -->
-  
-  `
+card(element);
 
 
 
@@ -342,24 +298,7 @@ selectOrdenar-addEventListener("change" , async()=>{
 
   remeras.forEach(element => {
 
-    ingresarCards.innerHTML += `
-    
-    
-    
-<!-- inicio card producto -->
-<div onclick="product()" class="contenedorProductoPaginas">
-<div class="contenedorImagenPaginas" >
-   <img class="imagenPaginas" src="${element.imagen}" alt="">
-    </div><!-- cierre contenedorImagenPaginas -->
-   <div class="infoProducto">
-   <p class="m-0 ">${element.descripcion}</p>
-   <p class="m-0 ">$ ${element.precio}</p>
- </div>
-</div> 
-<!-- cierre producto -->
-    
-    
-    `
+   card(element);
     
 });
 
@@ -377,25 +316,7 @@ selectOrdenar-addEventListener("change" , async()=>{
 
 
   remeras.forEach(element => {
-
-    ingresarCards.innerHTML += `
-    
-    
-    
-<!-- inicio card producto -->
-<div onclick="product()" class="contenedorProductoPaginas">
-<div class="contenedorImagenPaginas" >
-   <img class="imagenPaginas" src="${element.imagen}" alt="">
-    </div><!-- cierre contenedorImagenPaginas -->
-   <div class="infoProducto">
-   <p class="m-0 ">${element.descripcion}</p>
-   <p class="m-0 ">$ ${element.precio}</p>
- </div>
-</div> 
-<!-- cierre producto -->
-    
-    
-    `
+card(element)
     
 });
 
@@ -420,24 +341,7 @@ selectOrdenar-addEventListener("change" , async()=>{
 
   remerasDestacadas.forEach(element => {
 
-    ingresarCards.innerHTML += `
-    
-    
-    
-<!-- inicio card producto -->
-<div onclick="product()" class="contenedorProductoPaginas">
-<div class="contenedorImagenPaginas" >
-   <img class="imagenPaginas" src="${element.imagen}" alt="">
-    </div><!-- cierre contenedorImagenPaginas -->
-   <div class="infoProducto">
-   <p class="m-0 ">${element.descripcion}</p>
-   <p class="m-0 ">$ ${element.precio}</p>
- </div>
-</div> 
-<!-- cierre producto -->
-    
-    
-    `
+    card(element);
     
 });
 

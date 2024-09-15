@@ -1,5 +1,4 @@
 
-
 /*Parte superior*/
 nav{
   width: 100%;
@@ -82,6 +81,7 @@ nav{
   justify-content: center;
   align-items: center;
   margin: 10px;
+  cursor: pointer;
 }
 
 .imgCardMenu{
@@ -358,6 +358,7 @@ margin-bottom: 20px;
   .cardMenu{
     width: 100px;
     height: 100px;
+    
     
   }
   
