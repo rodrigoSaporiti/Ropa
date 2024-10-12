@@ -85,7 +85,12 @@ const radiosTienda = document.querySelector('input[name="categorias"]:checked')
  const shortRadio = document.getElementById("shortRadio")
  const accesoriosRadio = document.getElementById("accesoriosRadio")
 
-
+ const remerasRadioRes = document.getElementById("remerasRadioRes")
+ const cangurosRadioRes = document.getElementById("cangurosRadioRes")
+ const camperasRadioRes = document.getElementById("camperasRadioRes")
+ const pantalonesRadioRes = document.getElementById("pantalonesRadioRes")
+ const shortRadioRes = document.getElementById("shortRadioRes")
+ const accesoriosRadioRes = document.getElementById("accesoriosRadioRes")
 
 
 
@@ -96,10 +101,26 @@ function cambioCategoriaRadio(e){
 
   e.addEventListener("click", ()=>{
 
+    
+
+
     if(e.checked){
       localStorage.setItem("pagina", e.value)
       console.log(e.value)
-     window.location.reload()
+     
+//scroll hacia arriba
+     window.scrollTo({
+      top: 0,      // Desplazarse a la parte superior
+      behavior: 'smooth'  // Movimiento suave
+    });
+    
+
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 500); // Espera 500 milisegundos (medio segundo) para hacer el scroll antes de recargar
+  
+  
     }
 
   })
@@ -123,6 +144,13 @@ cambioCategoriaRadio(pantalonesRadio);
 cambioCategoriaRadio(shortRadio);
 cambioCategoriaRadio(accesoriosRadio);
 
+cambioCategoriaRadio(remerasRadioRes);
+cambioCategoriaRadio(cangurosRadioRes);
+cambioCategoriaRadio(camperasRadioRes);
+cambioCategoriaRadio(pantalonesRadioRes);
+cambioCategoriaRadio(shortRadioRes);
+cambioCategoriaRadio(accesoriosRadioRes);
+
 
     }
 
@@ -137,6 +165,13 @@ siEstaMarcadoMantener(pantalonesRadio);
 siEstaMarcadoMantener(shortRadio);
 siEstaMarcadoMantener(accesoriosRadio);
 
+siEstaMarcadoMantener(remerasRadioRes);
+siEstaMarcadoMantener(cangurosRadioRes);
+siEstaMarcadoMantener(camperasRadioRes);
+siEstaMarcadoMantener(pantalonesRadioRes);
+siEstaMarcadoMantener(shortRadioRes);
+siEstaMarcadoMantener(accesoriosRadioRes);
+
 
 
 // termina radio button
@@ -149,6 +184,7 @@ siEstaMarcadoMantener(accesoriosRadio);
 //comienzo talles
 
 const talleRadio = document.getElementsByName("opcionTalle");
+const talleRadioRes = document.getElementsByName("opcionTalleRes");
 
 
 async function mostrarPorTalle(e){
@@ -157,6 +193,40 @@ async function mostrarPorTalle(e){
     e.forEach(element => {
 
         element.addEventListener("click", async(e)=>{
+
+          // Se restablece precio filtro al hacer click en un talle nuevo
+           let min = document.getElementById("minPrecio")
+           let max = document.getElementById("maxPrecio")
+
+           let minRes = document.getElementById("minPrecioRes")
+          let maxRes = document.getElementById("maxPrecioRes")
+
+           min.value= "";
+           max.value= "";
+
+           minRes.value= "";
+           maxRes.value= "";
+          
+           //
+
+           window.scrollTo({
+            top: 0,      // Desplazarse a la parte superior
+            behavior: 'smooth'  // Movimiento suave
+          });
+
+           // Se restablece ordenar//
+         
+           const select = document.getElementById("selectOrdenar");
+           const selectRes = document.getElementById("selectOrdenarRes");
+
+           select.value = "default";
+           selectRes.value = "default";
+
+           //
+
+
+
+           //
 
             if(e.target.checked = true){
 
@@ -209,6 +279,7 @@ async function mostrarPorTalle(e){
 
 
 mostrarPorTalle(talleRadio);
+mostrarPorTalle(talleRadioRes);
 
 
 
@@ -220,24 +291,135 @@ mostrarPorTalle(talleRadio);
 // Almaceno el boton de filtrar
 
 let botonOk = document.getElementById("botonOk");
+let min = document.getElementById("minPrecio")
+let max = document.getElementById("maxPrecio")
 
 
-botonOk.addEventListener("click", ()=>{
-let minPrecio = document.getElementById("minPrecio").value;
-let maxPrecio = document.getElementById("maxPrecio").value;
+let botonOkRes = document.getElementById("botonOkRes");
+let minRes = document.getElementById("minPrecioRes")
+let maxRes = document.getElementById("maxPrecioRes")
 
-const localActualVestimenta  = JSON.parse(localStorage.getItem("actualVestimenta"))
+filtroPrecios(botonOk, min, max);
+filtroPrecios(botonOkRes, minRes, maxRes);
 
-const filtroLosPrecios = localActualVestimenta.filter((e)=> parseInt(e.precio)>=minPrecio &&   parseInt(e.precio)<= maxPrecio );
 
-ingresarCards.innerHTML="";
-filtroLosPrecios.forEach(e =>{
 
-    card(e);
+function filtroPrecios(boton, min, max){
+
+//quitar el disabled del boton ok
+
+max.addEventListener("input", ()=>{
+
+  if(max.value == ""){
+boton.disabled = true;
+  }else{
+    boton.disabled = false;
+  }
+
 
 })
 
-})
+
+  boton.addEventListener("click", ()=>{
+
+
+    let minPrecio = min.value;
+    let maxPrecio = max.value;
+
+
+    // Se restablece ordenar//
+         
+    const select = document.getElementById("selectOrdenar");
+    const selectRes = document.getElementById("selectOrdenarRes");
+
+    select.value = "default";
+    selectRes.value = "default";
+
+    //
+  
+
+    window.scrollTo({
+      top: 0,      // Desplazarse a la parte superior
+      behavior: 'smooth'  // Movimiento suave
+    });
+    
+    
+    const localActualVestimenta  = JSON.parse(localStorage.getItem("actualVestimenta"))
+    
+    if(minPrecio == ""){
+      
+      minPrecio = 0;
+      console.log(minPrecio)
+    
+      const filtroLosPrecios = localActualVestimenta.filter((e)=> parseInt(e.precio)>=minPrecio &&   parseInt(e.precio)<= maxPrecio );
+
+    
+      if(filtroLosPrecios.length == 0){
+
+        ingresarCards.innerHTML= `
+        <div class="sinResultado">
+        <p class="text-white">No se encontraron resultados</p>
+        </div> `;
+
+
+      }else{
+
+        localStorage.setItem("actualVestimenta", JSON.stringify(filtroLosPrecios))
+        let actualVestimenta = JSON.parse(localStorage.getItem("actualVestimenta"))
+  
+      ingresarCards.innerHTML="";
+  
+      actualVestimenta.forEach(e =>{
+      
+          card(e);
+      
+      })
+
+        
+      }
+    
+    }
+    
+    else{
+    
+      const filtroLosPrecios = localActualVestimenta.filter((e)=> parseInt(e.precio)>=minPrecio &&   parseInt(e.precio)<= maxPrecio );
+
+      if(filtroLosPrecios.length == 0){
+
+        ingresarCards.innerHTML= `
+        <div class="sinResultado">
+        <p class="text-white">No se encontraron resultados</p>
+        </div> `;
+
+
+      }else{
+
+        localStorage.setItem("actualVestimenta", JSON.stringify(filtroLosPrecios))
+        let actualVestimenta = JSON.parse(localStorage.getItem("actualVestimenta"))
+  
+      ingresarCards.innerHTML="";
+  
+      actualVestimenta.forEach(e =>{
+      
+          card(e);
+      
+      })
+
+        
+      }
+
+     
+    
+    }
+    
+    
+    
+    })
+
+
+}
+
+
 
 
 
@@ -245,8 +427,15 @@ filtroLosPrecios.forEach(e =>{
 // Ordenar por precio
 
 
-const selectOrdenar = document.getElementById("selectOrdenar");
- 
+const select = document.getElementById("selectOrdenar");
+const selectRes = document.getElementById("selectOrdenarRes");
+
+ordenar(select);
+ordenar(selectRes);
+
+function ordenar(selectOrdenar){
+
+  
 selectOrdenar.addEventListener("change" , async()=>{
 
 
@@ -254,6 +443,12 @@ selectOrdenar.addEventListener("change" , async()=>{
 
 
   if(selectOrdenar.value == 3 ){
+
+    window.scrollTo({
+      top: 0,      // Desplazarse a la parte superior
+      behavior: 'smooth'  // Movimiento suave
+    });
+
   let remeras = JSON.parse(localStorage.getItem("actualVestimenta"))
 
   remeras.sort((e, y)=> y.precio - e.precio );
@@ -272,6 +467,10 @@ selectOrdenar.addEventListener("change" , async()=>{
 
 }else if(selectOrdenar.value==2){
 
+  window.scrollTo({
+    top: 0,      // Desplazarse a la parte superior
+    behavior: 'smooth'  // Movimiento suave
+  });
 
   let remeras = JSON.parse(localStorage.getItem("actualVestimenta"))
 
@@ -282,35 +481,105 @@ selectOrdenar.addEventListener("change" , async()=>{
 
   remeras.forEach(element => {
 card(element)
-    
 });
+}
+
+})
+}
+ 
 
 
 
+// restablecer filtros
 
-}else if(selectOrdenar.value==1){
+const restablecerBoton = document.getElementById("restablecer");
+
+const restablecerRes = document.getElementById("restablecerRes");
+
+restablecer(restablecerBoton);
+restablecer(restablecerRes);
+
+function restablecer(r){
+
+  r.addEventListener("click", ()=>{
+
+       
+//scroll hacia arriba
+     window.scrollTo({
+      top: 0,      // Desplazarse a la parte superior
+      behavior: 'smooth'  // Movimiento suave
+    });
+    
 
 
-  let remeras = JSON.parse(localStorage.getItem("actualVestimenta"))
-
-  let remerasDestacadas = remeras.filter((e)=> e.destacado ==1);
-
-  console.log(remerasDestacadas);
-
+    setTimeout(() => {
+      window.location.reload();
+    }, 500); // Espera 500 milisegundos (medio segundo) para hacer el scroll antes de recargar
   
+  
+  })
+  
+}
 
-  ingresarCards.innerHTML = "";
+
+// filtro responsive
 
 
-  remerasDestacadas.forEach(element => {
+const filtroResponsive = document.getElementById("filtroResponsive");
+const okRes = document.getElementById("okRes");
+const menuResponsive = document.getElementById("menuResponsive");
+const pantallaNegra = document.getElementById("pantallaNegra");
+const scroll0 = document.getElementById("body");
 
-    card(element);
-    
-});
+let menuAbierto 
 
+cerrarMenu(filtroResponsive);
+cerrarMenu(okRes);
+
+function cerrarMenu(filtroResponsive){
+
+
+filtroResponsive.addEventListener("click", (e)=>{
+  
+  e.preventDefault()
+
+  let menuDnone = menuResponsive.classList.contains("d-none");
+
+
+
+  menuResponsive.classList.toggle("d-none")
+  pantallaNegra.classList.toggle("d-none")
+  scroll0.classList.toggle("overflow-hidden")
+
+  if(!menuDnone){
+    menuAbierto = false;
+    localStorage.setItem("menuAbierto", menuAbierto)
+  }else{
+    menuAbierto = true
+    localStorage.setItem("menuAbierto", menuAbierto)
+  }
+
+
+})
+
+}
+
+
+function dejarAbiertoFiltro(menuResponsive){
+
+  let menu = localStorage.getItem("menuAbierto")
+
+  console.log(menu)
+  if(menu == "true"){
+    menuResponsive.classList.remove("d-none")
+    pantallaNegra.classList.remove("d-none")
+    scroll0.classList.add("overflow-hidden")
+    console.log("hola")
+  }
 
 
 
 }
-})
 
+
+dejarAbiertoFiltro(menuResponsive);

@@ -240,151 +240,311 @@
 
 
 
+  <div class="filtro d-lg-none ">
+    <svg id="filtroResponsive" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
+    </svg>
+</div>
 
+
+
+<!-- Pantalla negra para el responsive al abrir filtros -->
+
+<div id="pantallaNegra" class="pantallaNegra d-none">
+
+</div>
+
+
+
+<!-- filtro responsive -->
+<section id="menuResponsive" class="filtroResponsive d-none">
+
+
+ 
+
+  <h4 class="colorTexto text-center mb-4 " style="margin-top: 80px;">categorias</h4>
+  
+
+
+
+
+
+
+  <div class="w-100 d-flex flex-wrap justify-content-center align-items-center">
+    
+    <input class="btn-check" type="radio" name="" id="remerasRadioRes" value="remerasHombre">
+    <label class="  m-1 btn btn-outline-dark" for="remerasRadioRes">Remeras</label>
+  
+    
+  
+    <input class="btn-check" type="radio" name="" id="pantalonesRadioRes" value="pantalonesHombre">
+    <label class=" m-1 btn btn-outline-dark" for="pantalonesRadioRes">Pantalones</label>
+  
+  
+
+  
+    <input class="btn-check" type="radio" name="" id="cangurosRadioRes" value="cangurosHombre">
+    <label class=" m-1 btn btn-outline-dark" for="cangurosRadioRes">Canguros</label>
+  
+
+  
+    <input class="btn-check" type="radio" name="" id="camperasRadioRes" value="camperasHombre">
+    <label class=" m-1 btn btn-outline-dark" for="camperasRadioRes">Camperas</label>
+  
+  
+  
+    <input class="btn-check" type="radio" name="" id="shortRadioRes" value="shortHombre">
+    <label class=" m-1 btn btn-outline-dark" for="shortRadiRes">Short</label>
+  
+  
+
+  
+    <input class="btn-check" type="radio" name="" id="accesoriosRadioRes" value="accesoriosHombre">
+    <label class=" m-1 btn btn-outline-dark" for="accesoriosRadioRes">Accesorios</label>
+  </div>
+
+
+  <h4 class="colorTexto text-center mt-4 mb-4">PRECIO ($)</h4>
+  
+  <div class=" d-flex justify-content-center mt-4 ">
+
+    <input class="precioResponsive form-control ms-2 " type="number" id="minPrecioRes" placeholder="Desde">
+    <p class="text-center m-2">-</p>
+    <input class="precioResponsive form-control me-2" type="number" id="maxPrecioRes" placeholder="Hasta">
+  </div>
+
+ 
+  <div class="d-flex justify-content-center">
+  <button class="btn btn-dark m-3 w-100" id="botonOkRes" disabled>Ok</button>
+</div>
+
+
+
+
+  <div class="d-flex justify-content-center flex-column align-items-center">
+
+<h4 class="colorTexto mt-4 text-center mb-4 ">Talle</h4>
+
+
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="width: 95%;">
+
+  <input type="radio" class="btn-check" id="xsRes" value="xs" autocomplete="off" name="opcionTalleRes" >
+  <label class="btn btn-outline-dark" for="xsRes">XS</label>
+
+  <input type="radio" class="btn-check" id="sRes" value="s" autocomplete="off" name="opcionTalleRes">
+  <label class="btn btn-outline-dark" for="sRes">S</label>
+
+  <input type="radio" class="btn-check" id="mRes" value="m" autocomplete="off" name="opcionTalleRes">
+  <label class="btn btn-outline-dark" for="mRes">M</label>
+
+  <input type="radio" class="btn-check" id="lRes" value="l" autocomplete="off" name="opcionTalleRes">
+  <label class="btn btn-outline-dark" for="lRes">L</label>
+
+  
+  <input type="radio" class="btn-check" id="xlRes" value="xl" autocomplete="off" name="opcionTalleRes">
+  <label class="btn btn-outline-dark" for="xlRes">XL</label>
+
+</div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="mt-5">
+
+
+    <select id="selectOrdenarRes" class="form-select m-0 m-auto p-2" aria-label="Default select example" style="width: 95%;">
+      <option value="default" disabled selected hidden>Ordenar</option>
+      <option value="2">Menor Precio</option>
+      <option value="3">Mayor Precio</option>
+    </select>
+
+
+  </div>
+
+ <div class="d-flex justify-content-center">
+<button id="okRes" class="btn btn-dark w-75 mt-5 p-3 ">OK</button>
+</div>
+
+
+<div class="d-lg-none d-flex justify-content-center mt-5">
+
+  <p id="restablecerRes" class=" restablecer ms-2 text-decoration-underline">Restablecer Filtros</p>
+  
+  </div>
+  
+</section>
+
+
+
+<!-- filtro normal -->
 
   <main class="mainPaginas  ">
 
-    <div class="contenedorMain">
-    
-       <aside class="asideRemeras">
-    
-       <div class="accordion" id="accordionExample">
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Categoría
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body d-flex justify-content-center flex-column align-items-center">
-
-              <div>
-              <input type="radio" name="categorias" id="remerasRadio" value="remerasHombre">
-              <label for="remera">Remeras</label>
-            </div>
-              
-            <div>
-              <input type="radio" name="categorias" id="pantalonesRadio" value="pantalonesHombre">
-              <label for="remera">Pantalones</label>
-            </div>
-            
-
-            <div>
-              <input type="radio" name="categorias" id="cangurosRadio" value="cangurosHombre">
-              <label for="remera">Canguros</label>
-            </div>
-
-            <div>
-              <input type="radio" name="categorias" id="camperasRadio" value="camperasHombre">
-              <label for="remera">Camperas</label>
-            </div>
-            
-            <div>
-              <input type="radio" name="categorias" id="shortRadio" value="shortHombre">
-              <label for="remera">Short</label>
-            </div>
-            
-
-            <div>
-              <input type="radio" name="categorias" id="accesoriosRadio" value="accesoriosHombre">
-              <label for="remera">Accesorios</label>
-            </div>
-            
+    <div class="contenedorMain row">
 
 
-
-
-            </div>
-          </div>
-        </div>
-
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Talle
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-    
-                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" id="xs" value="xs" autocomplete="off" name="opcionTalle" >
-                    <label class="btn btn-outline-dark" for="xs">XS</label>
-                  
-                    <input type="radio" class="btn-check" id="s" value="s" autocomplete="off" name="opcionTalle">
-                    <label class="btn btn-outline-dark" for="s">S</label>
-                  
-                    <input type="radio" class="btn-check" id="m" value="m" autocomplete="off" name="opcionTalle">
-                    <label class="btn btn-outline-dark" for="m">M</label>
-                
-                    <input type="radio" class="btn-check" id="l" value="l" autocomplete="off" name="opcionTalle">
-                    <label class="btn btn-outline-dark" for="l">L</label>
-                
-                    
-                    <input type="radio" class="btn-check" id="xl" value="xl" autocomplete="off" name="opcionTalle">
-                    <label class="btn btn-outline-dark" for="xl">XL</label>
-                
-                  </div>
-            
-            
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Precio
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body d-flex flex-column">
-    
-          <input type="number" id="minPrecio" placeholder="Min">
-          <input type="number" id="maxPrecio" placeholder="Max">
-          <button class="btn btn-dark m-2" id="botonOk">Ok</button>
-            
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Orden
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-    
-                <select id="selectOrdenar" class="form-select" aria-label="Default select example">
-                    <option value="" disabled selected hidden>Orden</option>
-                    <option value="1">Destacados</option>
-                    <option value="2">Menor Precio</option>
-                    <option value="3">Mayor Precio</option>
-                  </select>
-            </div>
-          </div>
-        </div>
-      </div>
-    
+      <div class="col-lg-2">
       
-       
-    </aside>
+<div class="m-0 p-0 p-sticky d-flex flex-column">
+   
+      <a class="text-decoration-none paginaPrincipal  text-black" href="index.html">
+        <section class="">
+        
+          <div class="d-flex justify-content-start align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+          </svg>
+          <p class="text-center m-0 me-2 ms-1">Pagina Principal</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+          </svg>
+        </div>
+        </section>
+        </a>
+        
+        
+<div class="d-none d-lg-flex contenedorFiltros">
+
+
+  
+
+  <h4 class="colorTexto  mt-4">categorias</h4>
+  
+
+  <div>
+    <input type="radio" name="categorias" id="remerasRadio" value="remerasHombre">
+    <label for="remerasRadio">Remeras</label>
+  </div>
     
+  <div>
+    <input type="radio" name="categorias" id="pantalonesRadio" value="pantalonesHombre">
+    <label for="pantalonesRadio">Pantalones</label>
+  </div>
+  
+
+  <div>
+    <input type="radio" name="categorias" id="cangurosRadio" value="cangurosHombre">
+    <label for="cangurosRadio">Canguros</label>
+  </div>
+
+  <div>
+    <input type="radio" name="categorias" id="camperasRadio" value="camperasHombre">
+    <label for="camperasRadio">Camperas</label>
+  </div>
+  
+  <div>
+    <input type="radio" name="categorias" id="shortRadio" value="shortHombre">
+    <label for="shortRadio">Short</label>
+  </div>
+  
+
+  <div>
+    <input  type="radio" name="categorias" id="accesoriosRadio" value="accesoriosHombre">
+    <label for="accesoriosRadio">Accesorios</label>
+  </div>
+ 
+
+
+
+  <div>
+
+<h4 class="colorTexto mt-4">Talle</h4>
+
+
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  <input type="radio" class="btn-check" id="xs" value="xs" autocomplete="off" name="opcionTalle" >
+  <label class="btn btn-outline-dark" for="xs">XS</label>
+
+  <input type="radio" class="btn-check" id="s" value="s" autocomplete="off" name="opcionTalle">
+  <label class="btn btn-outline-dark" for="s">S</label>
+
+  <input type="radio" class="btn-check" id="m" value="m" autocomplete="off" name="opcionTalle">
+  <label class="btn btn-outline-dark" for="m">M</label>
+
+  <input type="radio" class="btn-check" id="l" value="l" autocomplete="off" name="opcionTalle">
+  <label class="btn btn-outline-dark" for="l">L</label>
+
+  
+  <input type="radio" class="btn-check" id="xl" value="xl" autocomplete="off" name="opcionTalle">
+  <label class="btn btn-outline-dark" for="xl">XL</label>
+
+</div>
+
+
+  </div>
+
+
+
+
+ 
+  
+  <div>
+
+    <h4 class="colorTexto mt-4">PRECIO ($)</h4>
+
+
     
+    <input class="precio" type="number" id="minPrecio" placeholder="Desde">
+    <input class="precio" type="number" id="maxPrecio" placeholder="Hasta">
+
+
+  
+    <button class="btn btn-dark m-1" id="botonOk" disabled>Ok</button>
+
+
+
+  </div>
+
+
+
+  <div class="mt-4">
+
+
+    <select id="selectOrdenar" class="form-select" aria-label="Default select example">
+      <option value="default" disabled selected hidden>Ordenar</option>
+      <option value="1">Destacados</option>
+      <option value="2">Menor Precio</option>
+      <option value="3">Mayor Precio</option>
+    </select>
+
+
+  </div>
+
+  <div class="mt-4">
+
+    <p id="restablecer" class=" restablecer ms-2">Restablecer Filtros</p>
+
+  </div>
+
+
+</div>
+
+</div>
+
+</div>
+<!-- cierre col -->
+
+
+
+
+    <div class="col-lg-10 col-12">
     
       <section class="menuVestimenta" id="ingresarCards">
-    
-       
-    
-        
-    
-    
+
+  
       </section>
     
     
     
+    
+    </div>
     
     
     </div><!-- cierre contenedor dentro de main -->

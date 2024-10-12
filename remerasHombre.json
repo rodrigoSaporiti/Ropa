@@ -95,6 +95,104 @@
         "imagenMiniatura": "https://d22fxaf9t8d39k.cloudfront.net/f0867cb47d70e473e8f8dd2f858d7565e514cfd63075968d7da5e3e972c0ef6435305.jpg",
         "imagenMiniatura2": "https://acdn.mitiendanube.com/stores/002/815/592/products/whatsapp-image-2023-01-05-at-14-32-391-11b35ebe22cb9aa50016816096944126-1024-1024.jpeg",
         "destacado": 1    
+    },
+
+    {
+
+        "id" : 1,
+         "color": "negro",
+         "xl" : 3,
+         "l": 5,
+         "m": 0,
+         "s": 0,
+         "xs": 0,
+        "descripcion": "Remera Basica Oversize Negra",
+        "precio": "990",
+        "imagen": "https://bostonhype.com.ar/wp-content/uploads/2024/02/REMERA-OVERSIZED-NEGRA-1.jpg",
+        "imagenMiniatura": "https://acdn.mitiendanube.com/stores/002/815/592/products/image00003_f9400ab1-344a-4f55-8da0-33164b8801e8-photoroom1-98697cf0dbc998f4d616776771355474-1024-1024.png",
+        "imagenMiniatura2": "https://redndog.com/assets/cache/images/38bae1a56943c10835673040022058ad.jpg",
+        "destacado":  0
+    },
+
+    {
+        "id" : 2 ,
+        "color": "blanco",
+        "xl" : 0,
+         "l": 1,
+         "m": 5,
+         "s": 2,
+         "xs": 0,
+        "descripcion": "Remera Basica Oversize",
+        "precio": "400",
+        "imagen": "https://static.lefties.com/9/photos2/2023/V/0/2/p/1011/539/250/1011539250_2_6_1.jpg?t=1678953486925",
+        "imagenMiniatura": "https://d22fxaf9t8d39k.cloudfront.net/f0867cb47d70e473e8f8dd2f858d7565e514cfd63075968d7da5e3e972c0ef6435305.jpg",
+        "imagenMiniatura2": "https://acdn.mitiendanube.com/stores/002/815/592/products/whatsapp-image-2023-01-05-at-14-32-391-11b35ebe22cb9aa50016816096944126-1024-1024.jpeg",
+        "destacado": 0  
+    },
+
+    {
+        "id" : 3 ,
+        "color": "marron",
+        "xl" : 0,
+         "l": 1,
+         "m": 5,
+         "s": 0,
+         "xs": 0,
+        "descripcion": "Remera Basica Chocolate",
+        "precio": "990",
+        "imagen": "https://d22fxaf9t8d39k.cloudfront.net/943114e285734c33c9290124fe43404ce3121eadc4ac32e25797588957a9ff95142495.png",
+        "imagenMiniatura": "https://d22fxaf9t8d39k.cloudfront.net/f0867cb47d70e473e8f8dd2f858d7565e514cfd63075968d7da5e3e972c0ef6435305.jpg",
+        "imagenMiniatura2": "https://acdn.mitiendanube.com/stores/002/815/592/products/whatsapp-image-2023-01-05-at-14-32-391-11b35ebe22cb9aa50016816096944126-1024-1024.jpeg",
+        "destacado": 0  
+    },
+
+    {
+        "id" : 4,
+        "color": "blanco",
+        "xl" : 0,
+         "l": 1,
+         "m": 5,
+         "s": 0,
+         "xs": 0,
+        "descripcion": "Remera Basica Weare",
+        "precio": "1590",
+        "imagen": "https://topstyleindumentaria.com.uy/cdn/shop/files/image_57e5d046-2cd7-4ec4-89f0-d9761c3abeb9.jpg?v=1685417586",
+        "imagenMiniatura": "https://d22fxaf9t8d39k.cloudfront.net/f0867cb47d70e473e8f8dd2f858d7565e514cfd63075968d7da5e3e972c0ef6435305.jpg",
+        "imagenMiniatura2": "https://acdn.mitiendanube.com/stores/002/815/592/products/whatsapp-image-2023-01-05-at-14-32-391-11b35ebe22cb9aa50016816096944126-1024-1024.jpeg",
+        "destacado": 1
+    },
+
+    {
+
+        "id" : 5 ,
+        "color": "blanco",
+        "xl" : 0,
+         "l": 1,
+         "m": 5,
+         "s": 0,
+         "xs": 0,
+        "descripcion": "Remera Basica Weare",
+        "precio": "1500",
+        "imagen": "https://i.pinimg.com/originals/9b/a1/e2/9ba1e2eff584f95e7c4a8580c94c6080.png",
+        "imagenMiniatura": "https://d22fxaf9t8d39k.cloudfront.net/f0867cb47d70e473e8f8dd2f858d7565e514cfd63075968d7da5e3e972c0ef6435305.jpg",
+        "imagenMiniatura2": "https://acdn.mitiendanube.com/stores/002/815/592/products/whatsapp-image-2023-01-05-at-14-32-391-11b35ebe22cb9aa50016816096944126-1024-1024.jpeg",
+        "destacado": 1  
+    },
+
+    {
+        "id" : 6,
+        "color": "blanco",
+        "xl" : 0,
+         "l": 1,
+         "m": 5,
+         "s": 0,
+         "xs": 0,
+        "descripcion": "Remera Basica Weare",
+        "precio": "1190",
+        "imagen": "https://acdn.mitiendanube.com/stores/003/595/473/products/600_9724-7a881a99c17fd1b4f717000567738796-1024-1024.jpg",
+        "imagenMiniatura": "https://d22fxaf9t8d39k.cloudfront.net/f0867cb47d70e473e8f8dd2f858d7565e514cfd63075968d7da5e3e972c0ef6435305.jpg",
+        "imagenMiniatura2": "https://acdn.mitiendanube.com/stores/002/815/592/products/whatsapp-image-2023-01-05-at-14-32-391-11b35ebe22cb9aa50016816096944126-1024-1024.jpeg",
+        "destacado": 1    
     }
 
 
