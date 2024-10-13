@@ -20,7 +20,7 @@ async function traerProducto (){
 
 
   try {
-    const response = await fetch(`remeras.json`);
+    const response = await fetch(`remerasHombre.json`);
     // const response = await fetch(`https://rodrigosaporiti.github.io/Ropa/remeras.json`);
     if (!response.ok) {
       throw new Error('Hubo un problema al obtener los datos');
@@ -83,64 +83,93 @@ async function mostrarRemera(id){
     mainProduct.innerHTML = `
     
     
-<div class="row d-flex justify-content-center align-items-center">
+<div class="row  containProduct">
 
  
-    <div class="col-5 colImagen">
+    <div class="col-lg-5 col-12 colImagen">
     
-    <div>
+    <div class="containRes">
 
-   <svg id="flecha-izq" class="text-white cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+   <svg id="flecha-izq" class=" cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
 </svg>
 
-    <img id="img" class="imagenProduct cursor-pointer" src="${imagenes[0]}" alt="">
+    <img id="img" class="imagenProduct" src="${imagenes[0]}" alt="">
 
    
-   <svg id="flecha-derecha" class="text-white cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+   <svg id="flecha-derecha" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
 </svg>
 
     </div>
-    <div class="d-flex justify-content-center mt-4">
+    <div class=" imgContain mt-4">
+
+    <img id="img-min" class="imgMiniatura cursor-pointer" src="${imagenes[0]}" alt="">
 
       <img id="img-min1" class="imgMiniatura cursor-pointer" src="${imagenes[1]}" alt="">
 
       <img id="img-min2" class="imgMiniatura cursor-pointer" src="${imagenes[2]}" alt="">
 
     </div>
+   
 
     </div> <!-- cierre primer col  -->
     
 
-    <div class="col-5 colInfo">
+    <div class="col-lg-4 colInfo">
 
     
 
       <div class="contenedorInfo">
 
-        <h2 id="descripcion" class="text-center text-white">${e.descripcion}</h2>
+      <p class="sku">SKU <span>${e.id}</span></p>
+
+        <h2 id="descripcion" class="">${e.descripcion}</h2>
         
-        <h1 class="text-center text-white" >$<span id="precio">${e.precio}</span></h1>
+        <h1 class="text-center " >$<span id="precio">${e.precio}</span></h1>
 
-      <select id="talle" class="form-select m-3" aria-label="Default select example">
-        <option id="" value="" disabled selected hidden>Talle</option>
-         <option id="xs"   value="${e.xs}">XS</option>
-        <option id="s"  value="${e.s}" >S</option>
-        <option id="m"   value="${e.m}">M</option>
-        <option id="l"  value="${e.l}" >L</option>
-        <option id="xl"  value="${e.xl}">XL</option>
-        
-      </select>
+        <div class="linea"></div>
+
+   
 
 
+    <div class="mt-2">
+    
+ <input class="btn-check" type="radio" name="talleCarrito" id="xs" value="${e.xs}">
+    <label class=" btn btn-outline-dark" for="xs">XS</label>
+  
+     <input class="btn-check" type="radio" name="talleCarrito" id="s" value="${e.s}">
+    <label class=" m-1 btn btn-outline-dark" for="s">S</label>
+  
+     <input class="btn-check" type="radio" name="talleCarrito" id="m" value="${e.m}">
+    <label class=" m-1 btn btn-outline-dark" for="m">M</label>
   
 
-      <input id="cantidadTalle" type="number" min="1"   disabled> 
+  
+    <input class="btn-check" type="radio" name="talleCarrito" id="l" value="${e.l}">
+    <label class=" m-1 btn btn-outline-dark" for="l">L</label>
+  
+  
+  
+    <input class="btn-check" type="radio" name="talleCarrito" id="xl" value="${e.xl}">
+    <label class=" m-1 btn btn-outline-dark" for="xl">XL</label>
+  
+  
+
+  
+  </div>
 
 
 
-      <button id="comprar" class="btn btn-dark m-3">Añadir al Carrito</button>
+  <div>
+<button  id="menos">-</button>
+      <input class="inputTalle" id="cantidadTalle" type="number" min="1" disabled> 
+<button id="mas">+</button>
+</div>
+
+<p id="textAviso" class="text-danger m-0 p-0 d-none">Seleccione un talle</p>
+
+      <button id="comprar" class="btn btn-dark mt-4">Añadir al Carrito</button>
 
 
     </div>
@@ -161,7 +190,9 @@ async function mostrarRemera(id){
     `
 
 
-    // guardo las opciones de select en una variable
+   
+
+    // guardo las opciones de talle en una variable
 
     let xl = document.getElementById("xl");
     let l = document.getElementById("l");
@@ -176,54 +207,180 @@ async function mostrarRemera(id){
     disponibilidadTalles(s)
     disponibilidadTalles(xs)
 
+    // funcion para que los talles no disponibles se ajusten a disabled
 
-
-    const cantidadTalle = document.getElementById("cantidadTalle")
-
-    const talle = document.getElementById("talle")
-
-
-    // creo un avento de change para el select, y asi asignarle el valor maximo de cantidad dependiendo el stock del talle
+    function disponibilidadTalles(e){
+      if(e.value == 0 ){
     
-    talle.addEventListener("change", ()=>{
-      cantidadTalle.removeAttribute("disabled")
-      cantidadTalle.value = 1;
-      cantidadTalle.setAttribute("max", talle.value);
-      
-      
-    })
+       e.setAttribute("disabled","");
+    } 
+    
+    
+    }
+    
 
+// input de aumentar cantidad del producto al carrito
+
+  let cantidadTalle = document.getElementById("cantidadTalle")
+
+   
+
+    click(xl)
+    click(l)
+    click(m)
+    click(s)
+    click(xs)
+   
+    
+
+    //funcion que al hacer click en el talle agregue un maximo de stock al input cantidad
+
+function click(x){
+
+  x.addEventListener("click", ()=>{
+
+    cantidadTalle.removeAttribute("disabled")
+    textAviso.classList.add("d-none")
+
+      cantidadTalle.value = 1;
+
+     
+     
+      cantidadTalle.setAttribute("max", x.value);
+
+      localStorage.setItem("talleProducto", x.id)
+    
+  })
+}
+
+
+// funcion botones + - talle
+
+const mas = document.getElementById("mas");
+const menos = document.getElementById("menos");
+
+disminuirTalle(menos);
+incrementarTalle(mas);
+
+function disminuirTalle(x){
+
+x.addEventListener("click", ()=>{
+
+if(1 < cantidadTalle.value){
+  cantidadTalle.value = parseInt(cantidadTalle.value) - 1
+
+}
+})
+
+}
+
+
+
+function incrementarTalle(x){
+  x.addEventListener("click", ()=>{
+
+if(cantidadTalle.getAttribute("max") > cantidadTalle.value){
+
+  cantidadTalle.value = parseInt(cantidadTalle.value) + 1
+ 
+}
+
+  })
+}
+
+
+// funcion para cuando se hace click en agregar cantidad pero no se eligio talle
+
+function siNoEligioTalle(x){
+
+
+  x.addEventListener("click", ()=>{
+
+if(cantidadTalle.disabled == true){
+
+let textAviso = document.getElementById("textAviso");
+
+textAviso.classList.remove("d-none")
+}
+  })
+}
+   
+
+siNoEligioTalle(mas);
+siNoEligioTalle(menos);
+
+
+
+//almaceno las imagenes
+
+let imagen = document.getElementById("img")
+let imagen1 = document.getElementById("img-min") 
+let imagen2 = document.getElementById("img-min1")
+let imagen3 = document.getElementById("img-min2")
+
+// click en imagen
+
+function imagenClick(x){
+
+  x.addEventListener("click", ()=>{
+
+    imagen.src = x.src
+
+    border(imagen, imagen1)
+    border(imagen, imagen2)
+    border(imagen, imagen3)
+  })
+
+}
+
+imagenClick(imagen1);
+imagenClick(imagen2);
+imagenClick(imagen3);
+
+
+
+
+//agrego border a la imagen secundaria que esta tambien en la imagen principal
+
+border(imagen, imagen1)
+border(imagen, imagen2)
+border(imagen, imagen3)
+
+function border(a,b){
+
+  if(a.src == b.src){
+
+    b.classList.add("borderSeleccion")
+
+  }else{
+    b.classList.remove("borderSeleccion")
+  }
+
+
+}
+
+
+// eventos de click en flechas
 
 
 const flechaDerecha = document.getElementById("flecha-derecha");
 
-let imagen = document.getElementById("img")
-let imagen2 = document.getElementById("img-min1")
-let imagen3 = document.getElementById("img-min2")
-
-clickEnImagen(imagen);
-clickEnImagen(imagen2);
-clickEnImagen(imagen3);
-
 flechaDerecha.addEventListener("click", ()=>{
-  
-if(imagen.src == imagenes[0]){
-  imagen.src = imagenes[1];
-  imagen2.src = imagenes[2];
-  imagen3.src = imagenes[0];
-} else if( imagen.src == imagenes[1]){
-  imagen.src = imagenes[2];
-  imagen2.src = imagenes[0];
-  imagen3.src = imagenes[1];
-}else if (imagen.src == imagenes[2]){
-  imagen.src = imagenes[0];
-  imagen2.src = imagenes[1];
-  imagen3.src = imagenes[2];
-}
 
+  if(imagen.src == imagenes[0]){
+    imagen.src = imagenes[1];
+  } else if( imagen.src == imagenes[1]){
+    imagen.src = imagenes[2];
+  }else if (imagen.src == imagenes[2]){
+    imagen.src = imagenes[0];
+  }
 
+border(imagen, imagen1)
+border(imagen, imagen2)
+border(imagen, imagen3)
 })
-    
+
+
 
 
 const flechaIzq = document.getElementById("flecha-izq");
@@ -234,55 +391,51 @@ flechaIzq.addEventListener("click", ()=>{
   
   if(imagen.src == imagenes[0]){
     imagen.src = imagenes[2];
-    imagen2.src = imagenes[1];
-    imagen3.src = imagenes[0];
   } else if( imagen.src == imagenes[1]){
     imagen.src = imagenes[0];
-    imagen2.src = imagenes[2];
-    imagen3.src = imagenes[1];
   }else if (imagen.src == imagenes[2]){
     imagen.src = imagenes[1];
-    imagen2.src = imagenes[0];
-    imagen3.src = imagenes[2];
   }
-  
-  
+  border(imagen, imagen1)
+border(imagen, imagen2)
+border(imagen, imagen3)
+
   })
       
    
-
+ 
     
 // Almaceno el boton de agregar al carrito
 
 let botonComprar = document.getElementById("comprar");
 
-botonComprar.addEventListener("click", ()=>{
+ botonComprar.addEventListener("click", ()=>{
 
-    let talle = document.getElementById("talle");
-   let talleTexto = talle.options[talle.selectedIndex].textContent;
+   
+    let talleTexto = localStorage.getItem("talleProducto")
 
-    let cantidad = document.getElementById("cantidadTalle").value
-    let descripcion = document.getElementById("descripcion").textContent;
-    let precio = document.getElementById("precio").textContent;
-    let imagen = document.getElementById("img").src;
-
-
-    let productoPorIngresar={
-      talle: talleTexto,
-      cantidad: cantidad,
-      descripcion: descripcion,
-      precio: precio,
-      imagen: imagen
-    }
+     let cantidad = document.getElementById("cantidadTalle").value
+     let descripcion = document.getElementById("descripcion").textContent;
+     let precio = document.getElementById("precio").textContent;
+     let imagen = document.getElementById("img-min")
 
 
-listaCarrito.push(productoPorIngresar);
+     let productoPorIngresar={
+       talle: talleTexto,
+       cantidad: cantidad,
+       descripcion: descripcion,
+       precio: precio,
+       imagen: imagen
+     }
 
-console.log(listaCarrito);
 
-localStorage.setItem("carrito", JSON.stringify(listaCarrito));
+ listaCarrito.push(productoPorIngresar);
 
-})
+ console.log(listaCarrito);
+
+ localStorage.setItem("carrito", JSON.stringify(listaCarrito));
+
+ })
 
 
   
@@ -298,68 +451,3 @@ localStorage.setItem("carrito", JSON.stringify(listaCarrito));
 mostrarRemera(idProducto);
 
 
-// creo funcion para bloquear la seleccion de los talles no disponibles
-
-function disponibilidadTalles(e){
-
-
-  if(e.value == 0 ){
-
-   e.setAttribute("disabled","");
-   e.className = "bg-dark"
-} 
-
-
-}
-
-
-
-// funcion para abrir la imagen con zoom 
-
-function clickEnImagen(e){
-
-e.addEventListener("click", ()=>{
-
-  const imgContenedor = document.getElementById("clickEnImagen");
-
-  imgContenedor.style.display ="flex"
-
-  const imgClick = document.getElementById("imgClick");
-
-  imgClick.src= e.src;
-
-})
-
-
-function clickFueraDeImagen(){
-
-  
-  const imgContenedor = document.getElementById("clickEnImagen");
-
-
-  imgContenedor.addEventListener("click", e =>{
-
-    console.log(e);
-    if(e.target.id == "imgClick"){
-
-    }else{
-
-      imgContenedor.style.display ="none"
-      console.log("click fuera de la imagen")
-    }
-
-    
-
-  })
-
-  
-
-
-
-}
-
-
-clickFueraDeImagen();
-
-
-}

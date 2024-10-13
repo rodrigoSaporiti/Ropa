@@ -1,7 +1,7 @@
 [
     {
 
-        "id" : 1,
+        "id" : 283123,
          "color": "negro",
          "xl" : 3,
          "l": 5,
@@ -11,13 +11,13 @@
         "descripcion": "Remera Basica Oversize Negra",
         "precio": "990",
         "imagen": "https://bostonhype.com.ar/wp-content/uploads/2024/02/REMERA-OVERSIZED-NEGRA-1.jpg",
-        "imagenMiniatura": "https://acdn.mitiendanube.com/stores/002/815/592/products/image00003_f9400ab1-344a-4f55-8da0-33164b8801e8-photoroom1-98697cf0dbc998f4d616776771355474-1024-1024.png",
+        "imagenMiniatura": "https://disershop.com.uy/cache/aadiser/productos/CI-02-1-550x550.jpg",
         "imagenMiniatura2": "https://redndog.com/assets/cache/images/38bae1a56943c10835673040022058ad.jpg",
         "destacado":  0
     },
 
     {
-        "id" : 2 ,
+        "id" : 528261 ,
         "color": "blanco",
         "xl" : 0,
          "l": 1,
@@ -33,7 +33,7 @@
     },
 
     {
-        "id" : 3 ,
+        "id" : 52826761 ,
         "color": "marron",
         "xl" : 0,
          "l": 1,
@@ -49,7 +49,7 @@
     },
 
     {
-        "id" : 4,
+        "id" : 367821,
         "color": "blanco",
         "xl" : 0,
          "l": 1,
@@ -66,7 +66,7 @@
 
     {
 
-        "id" : 5 ,
+        "id" : 806283 ,
         "color": "blanco",
         "xl" : 0,
          "l": 1,
@@ -82,7 +82,7 @@
     },
 
     {
-        "id" : 6,
+        "id" : 355068,
         "color": "blanco",
         "xl" : 0,
          "l": 1,

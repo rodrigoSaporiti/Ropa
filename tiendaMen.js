@@ -583,3 +583,25 @@ function dejarAbiertoFiltro(menuResponsive){
 
 
 dejarAbiertoFiltro(menuResponsive);
+
+
+
+
+
+// funcion para setear en local el producto al hacer click y redirigir a product.html
+
+
+
+function product(e){
+
+  
+
+  window.location.href="product.html"
+
+
+
+  localStorage.setItem("id", e )
+
+   
+
+}

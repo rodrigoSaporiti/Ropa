@@ -4,190 +4,235 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorem</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="product.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   </head>
-<body class="textura2">
 
+<body id="body" class="">
 
+  <div class="barraSuperior">
+
+    <p class="text-white fst-italic descuento">Descuento de 10%</p>
     
-   <nav class="fixed-top">
+  </div>
 
-    <div class="contenedorNav">
+  <nav class="d-flex align-items-center justify-content-center">
 
-<div class="contenedorSeccionesNav">
-
-  <a class="link libre-baskerville-regular " id="mujer">Mujer</a>
-  <a class="link libre-baskerville-regular" id="hombre">Hombre</a>
-
-</div> <!-- cierre contenedorSeccionesNav -->
-
-
-<div class="contenedorTitulo me-5">
-
-  <h1 class="libre-baskerville-regular text-white me-5" onclick="inicio()">LOREM</h1>
-
-</div>  <!-- cierre contenedorTitulo -->
-
-
-<div class="contenedorIconos">
-
-  <svg onclick="user()" class="text-white cursor-pointer " xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-  </svg>
-
-  <svg onclick="fav()" class="text-white m-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-  </svg>
-
-
-  <svg onclick="carrito()"  class="text-white mb-1 ms-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
-    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
-  </svg>
-  
-</div>
-
-
-
-
-
-    </div>  <!-- cierre etiqueta contenedorNav -->
-    
-
-
-   </nav>
-
-
-
-   <header class="clickHM fixed-top">
-
-<div id="clickMujer" class="clickMujer d-none w-100 textura">
-
-
-  <div class="row w-100 h-100 justify-content-center align-items-center">
-
-    <div class="col-4 d-flex justify-content-center align-items-center">
-     
-    <a href="" class="text-center display-6 text-decoration-none text-black fw-bold ">New collection 2024 WOMAN</a>
-
+    <div class="">
+    <svg id="menu" class="imgMenu" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+    </svg>
     </div>
 
+   <div class="w-100">
+    <h1 onclick="inicio()" class="text-center  m-0">LOOKBETA</h1>
+  </div>
+    
+  </nav>
 
-    <div class="col-4  d-flex flex-column justify-content-center align-items-center  ">
-     
-      <a class="alink" href="">Remeras</a>
-      <a class="alink" href="">Camperas</a>
-      <a class="alink" href="">Canguros</a>
-      <a class="alink" href="">Pantalones</a>
+
+
+
+  <aside class="asideMenu d-none" id="asideMenu">
+    
+    <div class="bloque1 ">
+
+    <div class="menuMujer">
+
+      <h2 class="text-white text-center mb-4">WOMEN</h2>
+
+
+      <div class="d-flex flex-wrap container justify-content-center">
+
+       <a href="tienda.html" class="text-decoration-none text-black">
+      <div class="cardMenu" id="remerasMujer" data-titulo="remerasMujer">
+        <img class="imgCardMenu" src="imagenes/remera-de-modal-unisex.jpg" alt="" >
+
+        <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25"  >
+        <p class="text-center fw-bold mb-0">REMERAS</p>
+        </div>
+      </div>
+    </a>
       
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="cangurosMujer" data-titulo="cangurosMujer">
+          <img class="imgCardMenu" src="imagenes/canguroMUJER.jpg" alt="" >
   
+          <div class=" w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center text-white fw-bold mb-0">CANGUROS</p>
+          </div>
+        </div>
+      </a>
+  
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="camperasMujer" data-titulo="camperasMujer">
+          <img class="imgCardMenu" src="https://w0.peakpx.com/wallpaper/35/527/HD-wallpaper-women-model-pink-jacket-brown-eyes-smiling-standing-brunette-looking-at-viewer-white-background-black-pants-thumbnail.jpg" alt="">
+  
+          <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center fw-bold mb-0">CAMPERAS</p>
+          </div>
+        </div>
+
+      </a>
+
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="shortMujer" data-titulo="shortMujer">
+          <img class="imgCardMenu" src="https://i.pinimg.com/236x/df/23/47/df23470f0cb23e006be3d20c7e69285c.jpg" alt="">
+  
+          <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center fw-bold mb-0">SHORT</p>
+          </div>
+        </div>
+
+      </a>
+
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="pantalonesMujer" data-titulo="pantalonesMujer">
+          <img class="imgCardMenu" src="https://marieclaire.ng/wp-content/uploads/2023/11/Mum-660x1024.jpg" alt="">
+  
+          <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center fw-bold mb-0">PANTALONES</p>
+          </div>
+        </div>
+      </a>
+
+
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="accesoriosMujer" data-titulo="accesoriosMujer">
+          <img class="imgCardMenu" src="https://bucket.somosohlala.com.ar/s3fs-public/styles/internal_990/public/2024-01/2_14.jpg.webp?itok=HYgCLZ1P" alt="">
+  
+          <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center fw-bold mb-0">ACCESORIOS</p>
+          </div>
+        </div>
+      </a>
+
       </div>
 
 
-
-  </div>
-
-
-
-
-</div> <!-- click Mujer -->
- 
-
-
-
-<div id="clickHombre" class="clickMujer d-none w-100 textura">
-
-
-  <div class="row w-100 h-100 justify-content-center align-items-center">
-
-    <div class="col-4 d-flex justify-content-center align-items-center">
-     
-    <a href="" class="text-center display-6 text-decoration-none text-black fw-bold ">New collection 2024 MEN</a>
-
     </div>
+    <!-- cierre div menuMujer -->
 
 
-    <div class="col-4  d-flex flex-column justify-content-center align-items-center  ">
-     
-      <a class="alink" href="">Remeras</a>
-      <a class="alink" href="">Camperas</a>
-      <a class="alink" href="">Canguros</a>
-      <a class="alink" href="">Pantalones</a>
-      
+
+
+
+
+
+
+
+<!-- menu hombre (pero mantiene la class menuMujer) -->
+
+
+    <div class="menuMujer mt-4">
+
+      <h2 class="text-white text-center mb-4">MEN</h2>
+
+
+      <div class="d-flex flex-wrap container justify-content-center">
+
+        <a href="tienda.html" class="text-decoration-none text-black">
+      <div class="cardMenu" id="remerasHombre" data-titulo="remerasHombre">
+        <img class="imgCardMenu" src="https://m.media-amazon.com/images/I/616ZfqXB+nL._AC_UY580_.jpg" alt="">
+
+        <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+        <p class="text-center fw-bold mb-0">REMERAS</p>
+        </div>
+      </div>
+    </a>
+          
+      <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="cangurosHombre" data-titulo="cangurosHombre">
+          <img class="imgCardMenu" src="https://f.fcdn.app/imgs/f87318/gap.com.uy/gapuy/b239/original/catalogo/000737296_G1O0_1/2000-2000/canguro-con-felpa-hombre-light-heather-grey-b08.jpg" alt="">
   
+          <div class=" w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center text-white fw-bold mb-0">CANGUROS</p>
+          </div>
+        </div>
+      </a>
+
+
+        <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="camperasHombre" data-titulo="camperasHombre">
+          <img class="imgCardMenu" src="https://www.bostonwear.com/666421-home_default/cazadora-bomber.jpg" alt="">
+  
+          <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center fw-bold mb-0">CAMPERAS</p>
+          </div>
+        </div>
+      </a>
+
+        <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="shortHombre" data-titulo="shortHombre">
+          <img class="imgCardMenu" src="https://burtoncl.vtexassets.com/arquivos/ids/204703-800-auto?v=638367717786500000&width=800&height=auto&aspect=true" alt="">
+  
+          <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center fw-bold mb-0">SHORT</p>
+          </div>
+        </div>
+         </a>
+
+
+
+        <a href="tienda.html" class="text-decoration-none text-black">
+        <div class="cardMenu" id="pantalonesHombre" data-titulo="pantalonesHombre">
+          <img class="imgCardMenu" src="https://pantalonesdemezclilla.mx/cdn/shop/files/Hombre-azul-baggy-jeans-regulars_6.jpg?v=1706865218&width=1445" alt="">
+  
+          <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center fw-bold mb-0">PANTALONES</p>
+          </div>
+        </div>
+      </a>
+
+
+
+        <a href="tienda.html" class="text-decoration-none text-black"> 
+        <div class="cardMenu" id="accesoriosHombre" data-titulo="accesoriosHombre">
+          <img class="imgCardMenu" src="https://i5.walmartimages.com/asr/4592f63e-6dae-4b16-b2dd-3418a3bf9245.baf9a7845b400c7388b41b42f7c6a67a.jpeg" alt="">
+  
+          <div class="bg-light w-100 d-flex justify-content-center align-items-center h-25">
+          <p class="text-center fw-bold mb-0">ACCESORIOS</p>
+          </div>
+        </div>
+          </a>
+
       </div>
 
-
-
-  </div>
-
-
-
-
-</div> <!-- click Hombre -->
-
-
-
-
-
-   </header>
-
-   <div class="clickEnImagen" id="clickEnImagen">
-
-    <img id="imgClick" class="imgClick" src="" alt="">
-
-
-
-  </div>
+    </div>
+    <!-- cierre div menuhombre -->
+      
+          </div> <!-- cierre segundo col  -->
+    
+    </div><!-- cierre row -->
+    
     
 
+    
+    </main>
+
+
+
+  </div>
+  <!-- finaliza div bloque 1 -->
+
+  <div id="bloque2">
+
+  </div>
+
+  </aside>
+
+
+
+  
+
+
+  
 <main class="mainProduct">
 
 
-
-
-    <div class="col-5 colInfo">
-
-    
-
-      <div class="contenedorInfo">
-
-        <h2 id="descripcion" class="text-center text-white">Remera Oversize Negra</h2>
-        
-        <h1 class="text-center text-white" >$<span id="precio">990</span></h1>
-
-      <select id="talle" class="form-select m-3" aria-label="Default select example">
-        <option value="" disabled selected hidden>Talle</option>
-        <option value="xs">XS</option>
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-      </select>
-
-
-      
-      <select id="color" class="form-select m-3" aria-label="Default select example">
-        <option value="" disabled selected hidden>Color</option>
-        <option value="negro">Negro</option>
-        <option value="blanco">Blanco</option>
-      </select>
-  
-
-      <select id="cantidad" class="form-select m-3" aria-label="Default select example">
-        <option value="" disabled selected hidden>Cantidad</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-
-
-
-      <button id="comprar" class="btn btn-dark m-3">Añadir al Carrito</button>
 
 
     </div>
@@ -207,42 +252,61 @@
 
 
 
-<section class="seccionIndex">
-
+<section class="preFooter">
  
+  <div class="d-md-flex justify-content-center align-items-center flex-md-row h-100  d-flex justify-content-center flex-column ">
 
-    <div class="row w-100">
+    <div class="col-3">
+
+      <ul class="text-center d-flex justify-content-center flex-column align-items-center list-unstyled">
+
+        <h4 class="text-center d-none d-md-block">COLECCIONES</h4>
+        <h5 class="text-center d-block d-md-none">COLECCIONES</h5>
+        <li class="">WOMAN</li>
+        <li class="">MEN</li>
+      </ul>
+
+    </div>
 
 
-<div class="col-6 columnaColeccion">
+
+    <div class="col-3">
+
+      <ul class="text-center d-flex justify-content-evenly justify-content-md-center flex-column align-items-center list-unstyled ">
+
+        <h4 class="text-center d-md-block d-none">AYUDA</h4>
+        <h5 class="text-center d-md-none ">AYUDA</h5>
+        <li class="">CAMBIOS</li>
+        <li class="">NOSOTROS</li>
+      </ul>
+
+     
+
+    </div>
 
 
-<h1>Nueva Coleccion</h1>
-<h1>Woman</h1>
+    <div class="col-3 d-flex justify-content-evenly mt-4 mt-md-0">
+    
+   
 
+    <svg class="text-black" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+    </svg>
 
+    <svg class="text-black" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+    </svg>
+
+    <svg class="text-black" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+    </svg>
+    
+  
 
 
 </div>
 
-
-<div class="col-6 columnaColeccion">
-
-
-  <h1>Nueva Coleccion</h1>
-<h1>Men</h1>
-
-
-
-
-</div>
-
-
-
-
-    </div><!-- fin div row -->
-
- 
+  </div>
 
 
 </section>
@@ -250,78 +314,31 @@
 
 
 
+<footer class="">
 
 
 
-<footer class="d-flex text-white justify-content-center">
-  <div class="d-flex flex-column justify-content-center align-items-center m-4">
-      <a href="" class="text-white text-decoration-none m-4 mb-1 display-5 libre-baskerville-regular">LOREM</a>
-
-      <div class="d-flex align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-instagram" viewBox="0 0 16 16">
-              <path
-                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-          </svg>
-
-          <p class="m-0 ms-1">Lorem.uy</p>
-      </div>
-
-      <div class="d-flex align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-whatsapp" viewBox="0 0 16 16">
-              <path
-                  d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-          </svg>
-
-          <p class="m-0 ms-1">+598 99 999 999</p>
-      </div>
+  <div class="contenedorFooter">
 
 
-      <div class="d-flex align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-envelope" viewBox="0 0 16 16">
-              <path
-                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
-          </svg>
+    <h1 class=" me-md-5 text-black text-center ">LOOKBETA</h1>
+   
 
-          <p class="m-0 ms-1">Contacto@Lorem.uy</p>
-      </div>
+  <div class="d-md-flex justify-content-between align-items-end text-center">
 
-
+    <p class="text-black m-0 fw-light ms-lg-5 ">18 de Julio 1234, Montevideo, Uruguay</p>
+    
+    <p class="text-black m-0 fw-light me-lg-5">Todos los derechos reservados.</p>
+    
 
   </div>
-
-  <div class="d-flex m-5">
-      <ul class="list-unstyled m-5">
-
-          <li>Inico</li>
-          <li>Hombre</li>
-          <li>Mujer</li>
-
-      </ul>
-
-      <ul class="list-unstyled m-5">
-          <li>Accesorios</li>
-          <li>Sobre Nosotros</li>
-          <li>Contacto</li>
-      </ul>
-
-  </div>
-
-  <div class="d-flex justify-content-center align-items-center">
-      <iframe class="border rounded-2"
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3271.9970885640987!2d-56.20225192349142!3d-34.90652257355444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDU0JzIzLjUiUyA1NsKwMTEnNTguOCJX!5e0!3m2!1ses!2suy!4v1708836599175!5m2!1ses!2suy"
-          width="200" height="120" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-  </div>
-
+  
+</div>
 </footer>
 
-<script src="product.js"></script>
 <script src="redirigir.js"></script>
-<script src="index.js"></script>
+<script src="inicio.js"></script>
+<script src="product.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
